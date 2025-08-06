@@ -42,7 +42,7 @@
         </div>
         </div>
         <div class="mid1-2">
-            <img src="./image/Myportfolio_photo.jpg" alt="" height="550px" width="100%">
+            <img src="./mypic.jpg" alt="" height="550px" width="100%">
 
         </div>
     </div>
@@ -63,15 +63,32 @@
     </div>
     <br>
     <div class="mid4" id="career">
-        <h1>PROJECTS</h1> <br>
-        <h3>1) Event Management System using Java(JDBC and Servlets)</h3>
-        <p>Developed a web platform to simplify event planning and registrations using <span style="font-weight: 800; color: black;">JDBC, Servlets, Apache Tomcat, HTML, CSS and MySQL.</span> Built a user-friendly
-            interface with secure login and real-time updates.</p>
-        <h3>2) Design AES Algorithm based Secured Data For Encryption System Using Verilog</h3>
-        <p>a secured data encryption system based on the <span style="color: black;font-weight: 800;">AES (Advanced Encryption Standard)</span> algorithm
-            using Verilog  <span style="color: black;font-weight: 800;"> HDL (Hardware Description Language).</span> The system will enable robust encryption
-            and decryption of digital data, ensuring confidentiality and integrity in data communication</p>
+  <h1>PROJECTS</h1> <br>
+
+ <div class="projects-container">
+  <!-- Project 1 -->
+  <div class="project-box">
+    <h1>Project-1</h1>
+    <div class="project-title">Event Management System</div>
+    <div class="project-description">
+      Developed a web platform using <strong>JDBC, Servlets, Tomcat, 
+    HTML, CSS, MySQL</strong>. Includes real-time updates and login systems.
     </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-box">
+    <h1>Project-2</h1>
+    <div class="project-title">AES Algorithm-based Encryption</div>
+    <div class="project-description">
+      A secure data encryption system based on the <strong>AES</strong> 
+      algorithm using <strong>Verilog HDL</strong>. Ensures high data confidentiality.
+    </div>
+  </div>
+</div>
+
+</div>
+
     <br>
     <div class="last" id="skills">
         <h1 >SKILLS</h1>
@@ -113,17 +130,16 @@
     </div>
     <div class="contact" id="contact">
     <h1>Contact Me</h1>
-    <form action="https://formsubmit.co/gova939222@gmail.com" method="POST">
+    <form action="https://formsubmit.co/gova939222@gmail.com?hide_logo=true" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" ></textarea>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
       <button type="submit">Send Message</button>
     </form>
   </div>
     <script>
-    // Toggle Project Descriptions
     document.querySelectorAll(".project-title").forEach((btn) => {
       btn.addEventListener("click", () => {
         const desc = btn.nextElementSibling;
@@ -131,6 +147,22 @@
       });
     });
   </script>
+  <script>
+  document.querySelectorAll(".project-title").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const projectBox = btn.parentElement;
+      projectBox.classList.toggle("open");
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll(".project-box").forEach((box) => {
+    box.addEventListener("click", () => {
+      box.classList.toggle("open");
+    });
+  });
+</script>
+
 
 </body>
 
